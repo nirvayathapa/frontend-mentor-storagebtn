@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+$background-color:hsl(229, 57%, 11%);
+$secondary-color:hsl(228, 56%, 26%);
+$border-radius:1rem;
+$font-family:'Raleway', sans-serif;
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $background-color;
+    background-image: url('../images/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100vw;
+    position: relative;
+}
+
+@mixin images($height) {
+    border-radius: $border-radius;
+    background-color: $background-color;
+    height: $height;
+    margin-top: 11.5rem;
+    margin-left: 3rem;
+    width: 6rem;
+    
+}
+
+.nav{
+    width:35rem ;
+    height: 20rem;
+    background-color:$secondary-color ;
+    border-radius: $border-radius;
+    border-top-right-radius: 10rem;
+    position: absolute;
+    top: 32.5%;
+    left: 20%;
+    .logo{
+        position: absolute;
+        top: 4rem;
+        left:3rem;
+    }
+    .document{
+        @include images(6rem);
+        padding:1.5rem;
+    
+    }
+    .folder{
+        @include images(6rem);
+        padding: 1.5rem;
+    }
+    .upload{
+        @include images(6rem);
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+        padding-left:1rem;
+        padding-right: 1rem;
+    }
+    .document:hover,.folder:hover,.upload:hover{
+        cursor: pointer;
+        border: 2px solid white;
+        box-shadow: 1px 1px 2px 1px white,-1px -1px 2px 1px white;
+    }
+}
+.storage{
+    border-radius: $border-radius;
+    background-color: $secondary-color;
+    height: 15rem;
+    width: 35%;
+    position: absolute;
+    top: 38.75%;
+    left: 45%;
+    .info{
+        position: absolute;
+        top: 4rem;
+        left: 10%;
+        color: hsl(243, 100%, 93%);
+        font-family: $font-family;
+        font-size: 14px;
+        .GB{
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .tooltip{
+        position: absolute;
+        bottom: 90%;
+        right: 10%;
+        background-color: white;
+        border-radius: $border-radius;
+        width: 17.5rem;
+        padding: 2rem;
+        color:hsl(229, 7%, 55%);
+        font-family: $font-family;
+        font-size: 14px;
+        .storage-left{
+            color: hsl(228, 56%, 26%);
+            font-size: 14px;
+            font-family: $font-family;
+            font-weight: bolder;
+            font-size: 2.8rem;
+        }
+    
+
+    
+        
+    }
+    .tooltip::after{
+        content: '';
+        width: 0rem;
+        height: 0rem;
+        border-left: 1.5rem solid transparent;
+        border-right: 1.5rem solid white;
+        border-bottom: 1.5rem solid transparent;
+        border-top: 1.5rem solid white;
+        position: absolute;
+        left: 83%;
+        top:90%;
+       
+        
+       
+        
+    }
+    .bar{
+        border: 3px solid $background-color;
+        border-radius: $border-radius;
+        background-color: $background-color;
+        height:2rem;
+        width:80%;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        .gradient{
+            position: relative;
+            border-radius: $border-radius;
+            background-image: linear-gradient( to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+            width: 75%;
+            height: 100%;
+            .bar-icon{
+                height: 1.2rem;
+                position: absolute;
+                left: 95.5%;
+                top: 1px;
+
+            }
+        }
+
+    }
+    @mixin storage-info {
+        color: white;
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: bold;
+        
+    }
+    .initial{
+        @include storage-info();
+        position:absolute;
+        top: 70%;
+        left: 10%;
+        
+    }
+    .final{
+        @include storage-info();
+        position: absolute;
+        top: 70%;
+        right: 10%;
+    }
+
+
+}
+@import 'mobile.scss';

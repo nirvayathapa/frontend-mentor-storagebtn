@@ -1,0 +1,66 @@
+@media screen and (min-width:0px) and (max-width:700px){
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        background-image: url(../images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .nav{
+        width:35rem ;
+        height: 20rem;
+        background-color:$secondary-color ;
+        border-radius: $border-radius;
+        border-top-right-radius: 10rem;
+        position: absolute;
+        left: 10%;
+        top: 30%;
+        width:80%
+    }
+    .storage{
+        border-radius: $border-radius;
+        background-color: $secondary-color;
+        height: 15rem;
+        width: 35%;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        width: 80%;
+        margin-top:3rem;
+        .tooltip{
+            position: absolute;
+            bottom: -30%; 
+            right: 20%;
+            text-align: center;
+            background-color: white;
+            border-radius: $border-radius;
+            width: 17.5rem;
+            padding: 2rem;
+            color:hsl(229, 7%, 55%);
+            font-family: $font-family;
+            font-size: 14px;
+        }
+        .tooltip::after{
+            content: '';
+            visibility: hidden;
+        }
+    }
+   
+    .bar-icon{
+        height: 1.05rem;
+        position: absolute;
+        left: 90%;
+        top: 1px;
+
+    }
+       
+    
+
+}

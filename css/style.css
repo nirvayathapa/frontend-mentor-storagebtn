@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: hsl(229deg, 57%, 11%);
+  background-image: url("../images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+  position: relative;
+}
+
+.nav {
+  width: 35rem;
+  height: 20rem;
+  background-color: hsl(228deg, 56%, 26%);
+  border-radius: 1rem;
+  border-top-right-radius: 10rem;
+  position: absolute;
+  top: 32.5%;
+  left: 20%;
+}
+.nav .logo {
+  position: absolute;
+  top: 4rem;
+  left: 3rem;
+}
+.nav .document {
+  border-radius: 1rem;
+  background-color: hsl(229deg, 57%, 11%);
+  height: 6rem;
+  margin-top: 11.5rem;
+  margin-left: 3rem;
+  width: 6rem;
+  padding: 1.5rem;
+}
+.nav .folder {
+  border-radius: 1rem;
+  background-color: hsl(229deg, 57%, 11%);
+  height: 6rem;
+  margin-top: 11.5rem;
+  margin-left: 3rem;
+  width: 6rem;
+  padding: 1.5rem;
+}
+.nav .upload {
+  border-radius: 1rem;
+  background-color: hsl(229deg, 57%, 11%);
+  height: 6rem;
+  margin-top: 11.5rem;
+  margin-left: 3rem;
+  width: 6rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.nav .document:hover, .nav .folder:hover, .nav .upload:hover {
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 1px 1px 2px 1px white, -1px -1px 2px 1px white;
+}
+
+.storage {
+  border-radius: 1rem;
+  background-color: hsl(228deg, 56%, 26%);
+  height: 15rem;
+  width: 35%;
+  position: absolute;
+  top: 38.75%;
+  left: 45%;
+}
+.storage .info {
+  position: absolute;
+  top: 4rem;
+  left: 10%;
+  color: hsl(243deg, 100%, 93%);
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.storage .info .GB {
+  color: white;
+  font-weight: bold;
+}
+.storage .tooltip {
+  position: absolute;
+  bottom: 90%;
+  right: 10%;
+  background-color: white;
+  border-radius: 1rem;
+  width: 17.5rem;
+  padding: 2rem;
+  color: hsl(229deg, 7%, 55%);
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.storage .tooltip .storage-left {
+  color: hsl(228deg, 56%, 26%);
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  font-size: 2.8rem;
+}
+.storage .tooltip::after {
+  content: "";
+  width: 0rem;
+  height: 0rem;
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid white;
+  border-bottom: 1.5rem solid transparent;
+  border-top: 1.5rem solid white;
+  position: absolute;
+  left: 83%;
+  top: 90%;
+}
+.storage .bar {
+  border: 3px solid hsl(229deg, 57%, 11%);
+  border-radius: 1rem;
+  background-color: hsl(229deg, 57%, 11%);
+  height: 2rem;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+.storage .bar .gradient {
+  position: relative;
+  border-radius: 1rem;
+  background-image: linear-gradient(to right, hsl(6deg, 100%, 80%), hsl(335deg, 100%, 65%));
+  width: 75%;
+  height: 100%;
+}
+.storage .bar .gradient .bar-icon {
+  height: 1.2rem;
+  position: absolute;
+  left: 95.5%;
+  top: 1px;
+}
+.storage .initial {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+}
+.storage .final {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 70%;
+  right: 10%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .nav {
+    width: 35rem;
+    height: 20rem;
+    background-color: hsl(228deg, 56%, 26%);
+    border-radius: 1rem;
+    border-top-right-radius: 10rem;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 80%;
+  }
+  .storage {
+    border-radius: 1rem;
+    background-color: hsl(228deg, 56%, 26%);
+    height: 15rem;
+    width: 35%;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 80%;
+    margin-top: 3rem;
+  }
+  .storage .tooltip {
+    position: absolute;
+    bottom: -30%;
+    right: 20%;
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+    width: 17.5rem;
+    padding: 2rem;
+    color: hsl(229deg, 7%, 55%);
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+  }
+  .storage .tooltip::after {
+    content: "";
+    visibility: hidden;
+  }
+  .bar-icon {
+    height: 1.05rem;
+    position: absolute;
+    left: 90%;
+    top: 1px;
+  }
+}/*# sourceMappingURL=style.css.map */
